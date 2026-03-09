@@ -8,8 +8,7 @@ nav.classList.toggle("show")
 }
 
 
-
-// SMOOTH SCROLL
+// SCROLL
 
 function scrollToSection(id){
 
@@ -20,37 +19,22 @@ behavior:"smooth"
 }
 
 
+// DOWNLOAD BUTTON
 
-// SCROLL REVEAL
+function downloadApp(){
 
-const reveals = document.querySelectorAll(".reveal")
-
-window.addEventListener("scroll",()=>{
-
-reveals.forEach(el=>{
-
-const top = el.getBoundingClientRect().top
-const windowHeight = window.innerHeight
-
-if(top < windowHeight - 100){
-
-el.classList.add("active")
+alert("Aplikasi Trashure akan segera tersedia!")
 
 }
 
-})
 
-})
-
-
-
-// COUNTER ANIMATION
+// COUNTER
 
 const counters = document.querySelectorAll(".counter")
 
 counters.forEach(counter=>{
 
-const update=()=>{
+const update = ()=>{
 
 const target = +counter.getAttribute("data-target")
 const count = +counter.innerText
@@ -76,8 +60,7 @@ update()
 })
 
 
-
-// WALLET SIMULATION
+// WALLET
 
 let saldo = 0
 
@@ -90,6 +73,6 @@ saldo += reward
 document.getElementById("money").innerText =
 "Rp " + saldo.toLocaleString()
 
-alert("Selamat! Anda mendapat Rp " + reward)
+alert("Anda mendapatkan Rp " + reward)
 
 }

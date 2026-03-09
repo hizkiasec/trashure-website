@@ -1,165 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trashure - Turn Trash Into Treasure</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<title>Trashure - Ubah Sampah Jadi Uang</title>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
 <body>
 
+<!-- NAVBAR -->
+
 <header>
-<div class="container nav">
 
-<h1 class="logo">Trashure</h1>
+<div class="logo">Trashure</div>
 
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#impact">Impact</a></li>
-<li><a href="#join">Join</a></li>
-</ul>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#cara">Cara Kerja</a>
+<a href="#reward">Reward</a>
+</nav>
 
-<div class="hamburger" id="hamburger">
-☰
-</div>
+<button class="cta" onclick="downloadApp()">Download App</button>
 
-</div>
 </header>
 
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-<div class="container hero-grid">
-
-<div class="hero-text">
-<h2>Turn Trash Into <span>Treasure</span></h2>
+<h1>Ubah Sampah Jadi Uang</h1>
 
 <p>
-Trashure adalah platform yang mengajak masyarakat membuang sampah dengan benar
-dan mendapatkan reward berupa uang.
+Trashure mengajak masyarakat membuang sampah dengan benar  
+dan mendapatkan reward uang secara digital.
 </p>
 
-<button class="primary-btn" id="startBtn">
-Get Started
-</button>
-
-</div>
-
-<div class="hero-img">
-<img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png">
-</div>
-
-</div>
+<button class="hero-btn" onclick="startMission()">Mulai Sekarang</button>
 
 </section>
 
+<!-- ABOUT -->
 
+<section class="about" id="about">
 
-<section class="about reveal" id="about">
+<h2>Tentang Trashure</h2>
 
-<div class="container">
-
-<h2 class="section-title">About Trashure</h2>
-
-<p class="about-text">
-Trashure adalah ide bisnis inovatif yang menggabungkan teknologi dan
-lingkungan. Dengan sistem reward berbasis aplikasi, masyarakat dapat
-mengumpulkan poin dari setiap sampah yang dibuang dengan benar dan
-menukarkannya menjadi uang.
+<p>
+Trashure adalah ide bisnis yang menggabungkan teknologi dan lingkungan.  
+Setiap sampah yang dibuang akan ditimbang dan pengguna akan mendapatkan reward berupa uang digital.
 </p>
 
-</div>
-
 </section>
 
+<!-- CARA KERJA -->
 
+<section class="steps" id="cara">
 
-<section class="features reveal" id="features">
+<h2>Cara Kerja</h2>
 
-<div class="container">
+<div class="step-container">
 
-<h2 class="section-title">Our Features</h2>
-
-<div class="features-grid">
-
-<div class="card">
-<h3>Smart Bin</h3>
-<p>Tempat sampah pintar yang mendeteksi jenis sampah.</p>
+<div class="step">
+<h3>1. Buang Sampah</h3>
+<p>Masukkan sampah ke tempat sampah Trashure.</p>
 </div>
 
-<div class="card">
-<h3>Reward System</h3>
-<p>Dapatkan uang dari setiap sampah yang kamu buang.</p>
+<div class="step">
+<h3>2. Scan QR</h3>
+<p>Scan QR Code menggunakan aplikasi Trashure.</p>
 </div>
 
-<div class="card">
-<h3>Mobile App</h3>
-<p>Aplikasi untuk tracking reward dan kontribusi lingkungan.</p>
-</div>
-
+<div class="step">
+<h3>3. Dapat Reward</h3>
+<p>Sistem menghitung sampah dan memberi reward.</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- REWARD -->
 
+<section class="reward" id="reward">
 
-<section class="impact reveal" id="impact">
+<h2>Total Reward Terkumpul</h2>
 
-<div class="container">
+<div class="money">Rp <span id="money">0</span></div>
 
-<h2 class="section-title">Our Impact</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h3 class="number" data-target="10000">0</h3>
-<p>Kg Waste Collected</p>
-</div>
-
-<div class="stat">
-<h3 class="number" data-target="5000">0</h3>
-<p>Active Users</p>
-</div>
-
-<div class="stat">
-<h3 class="number" data-target="100">0</h3>
-<p>Smart Bins</p>
-</div>
-
-</div>
-
-</div>
+<button onclick="addReward()">Simulasi Dapat Reward</button>
 
 </section>
 
-
-
-<section class="join reveal" id="join">
-
-<div class="container join-box">
-
-<h2>Join The Movement</h2>
-
-<p>Mulai peduli lingkungan dan dapatkan reward.</p>
-
-<button class="primary-btn" id="joinBtn">
-Join Now
-</button>
-
-</div>
-
-</section>
-
-
+<!-- FOOTER -->
 
 <footer>
 
-<p>© 2026 Trashure Team</p>
+<p>© 2026 Trashure - Save Environment, Earn Money</p>
 
 </footer>
 

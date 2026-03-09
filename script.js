@@ -1,80 +1,27 @@
-// hamburger menu
+let total = 0
 
-const hamburger = document.getElementById("hamburger")
-const navLinks = document.getElementById("navLinks")
+function addReward(){
 
-hamburger.onclick = () =>{
-navLinks.classList.toggle("show")
+let random = Math.floor(Math.random()*5000)+1000
+
+total += random
+
+document.getElementById("money").innerText = total.toLocaleString()
+
+alert("Selamat! Anda mendapat reward Rp " + random)
+
 }
 
+function startMission(){
 
-
-// smooth scroll button
-
-document.getElementById("startBtn").onclick = () =>{
-document.getElementById("features").scrollIntoView({
+document.getElementById("cara").scrollIntoView({
 behavior:"smooth"
 })
-}
-
-
-
-document.getElementById("joinBtn").onclick = () =>{
-alert("Terima kasih! Fitur aplikasi akan segera hadir.")
-}
-
-
-
-// reveal animation
-
-const reveals = document.querySelectorAll(".reveal")
-
-window.addEventListener("scroll", ()=>{
-
-reveals.forEach(el=>{
-
-const windowHeight = window.innerHeight
-const elementTop = el.getBoundingClientRect().top
-
-if(elementTop < windowHeight - 100){
-el.classList.add("active")
-}
-
-})
-
-})
-
-
-
-// counter animation
-
-const counters = document.querySelectorAll(".number")
-
-const speed = 200
-
-counters.forEach(counter=>{
-
-const update = ()=>{
-
-const target = +counter.getAttribute("data-target")
-const count = +counter.innerText
-
-const inc = target / speed
-
-if(count < target){
-
-counter.innerText = Math.ceil(count + inc)
-
-setTimeout(update,10)
-
-}else{
-
-counter.innerText = target
 
 }
 
+function downloadApp(){
+
+alert("Fitur download app akan segera tersedia!")
+
 }
-
-update()
-
-})

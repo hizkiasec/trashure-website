@@ -1,3 +1,20 @@
+// INTRO SCREEN
+
+window.addEventListener("load", () => {
+
+setTimeout(()=>{
+
+document.getElementById("intro").style.opacity = "0"
+
+setTimeout(()=>{
+document.getElementById("intro").style.display = "none"
+},1000)
+
+},3000)
+
+})
+
+
 // MENU MOBILE
 
 const menuBtn = document.getElementById("menuBtn")
@@ -19,12 +36,10 @@ behavior:"smooth"
 }
 
 
-// DOWNLOAD BUTTON
+// DOWNLOAD APP
 
 function downloadApp(){
-
 alert("Aplikasi Trashure akan segera tersedia!")
-
 }
 
 
@@ -60,7 +75,7 @@ update()
 })
 
 
-// WALLET
+// REWARD SIMULATION
 
 let saldo = 0
 
@@ -73,6 +88,26 @@ saldo += reward
 document.getElementById("money").innerText =
 "Rp " + saldo.toLocaleString()
 
-alert("Anda mendapatkan Rp " + reward)
+alert("Selamat! Anda mendapat Rp " + reward)
 
 }
+
+
+// SCROLL ANIMATION
+
+const reveals = document.querySelectorAll(".reveal")
+
+window.addEventListener("scroll", ()=>{
+
+reveals.forEach(el=>{
+
+const top = el.getBoundingClientRect().top
+const windowHeight = window.innerHeight
+
+if(top < windowHeight - 100){
+el.classList.add("active")
+}
+
+})
+
+})

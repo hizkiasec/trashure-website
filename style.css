@@ -8,6 +8,62 @@ font-family:sans-serif;
 body{
 background:#f5f7fa;
 color:#333;
+overflow-x:hidden;
+}
+
+
+/* INTRO */
+
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#16a34a;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+transition:1s;
+}
+
+.intro-content{
+text-align:center;
+color:white;
+}
+
+.intro-logo{
+font-size:50px;
+margin-bottom:20px;
+animation:zoom 1.5s ease;
+}
+
+.loader{
+width:200px;
+height:6px;
+background:rgba(255,255,255,0.3);
+border-radius:10px;
+overflow:hidden;
+}
+
+.loader::after{
+content:"";
+display:block;
+height:100%;
+width:0;
+background:white;
+animation:loading 3s forwards;
+}
+
+@keyframes loading{
+0%{width:0}
+100%{width:100%}
+}
+
+@keyframes zoom{
+0%{transform:scale(0.5);opacity:0}
+100%{transform:scale(1);opacity:1}
 }
 
 
@@ -119,17 +175,6 @@ padding:100px 10%;
 text-align:center;
 }
 
-.about{
-background:white;
-}
-
-.features{
-background:#f5f7fa;
-}
-
-
-/* FEATURES */
-
 .feature-grid{
 display:flex;
 gap:30px;
@@ -201,6 +246,20 @@ background:#222;
 color:white;
 padding:30px;
 text-align:center;
+}
+
+
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 

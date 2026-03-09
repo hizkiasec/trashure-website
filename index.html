@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trashure</title>
+<title>Trashure - Turn Trash Into Treasure</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,11 +17,13 @@
 
 <div class="logo">Trashure</div>
 
-<nav id="navMenu">
+<nav id="nav">
+
 <a href="#home">Home</a>
 <a href="#about">Tentang</a>
 <a href="#how">Cara Kerja</a>
 <a href="#impact">Impact</a>
+
 </nav>
 
 <div class="menu" id="menuBtn">☰</div>
@@ -32,34 +34,44 @@
 
 <section class="hero" id="home">
 
+<div class="floating-icons">
+
+<div class="icon">♻️</div>
+<div class="icon">🗑️</div>
+<div class="icon">💰</div>
+
+</div>
+
 <h1>Ubah Sampah Jadi Uang</h1>
 
 <p>
-Trashure adalah platform yang mengajak masyarakat membuang
-sampah dengan benar dan mendapatkan reward uang digital.
+Trashure mengajak masyarakat membuang sampah dengan benar
+dan mendapatkan reward uang digital.
 </p>
 
-<button onclick="startMission()">Mulai Sekarang</button>
+<button onclick="scrollToSection('how')">
+Mulai Sekarang
+</button>
 
 </section>
 
 
 
-<section class="about" id="about">
+<section class="about reveal" id="about">
 
 <h2>Tentang Trashure</h2>
 
 <p>
-Trashure adalah ide bisnis berbasis teknologi lingkungan.
-Setiap sampah yang dikumpulkan akan dihitung dan pengguna
-mendapatkan reward uang digital melalui aplikasi.
+Trashure adalah platform inovatif yang menggabungkan teknologi
+dan lingkungan untuk menciptakan sistem pengelolaan sampah yang
+memberikan reward kepada masyarakat.
 </p>
 
 </section>
 
 
 
-<section class="how" id="how">
+<section class="how reveal" id="how">
 
 <h2>Cara Kerja</h2>
 
@@ -72,12 +84,12 @@ mendapatkan reward uang digital melalui aplikasi.
 
 <div class="card">
 <h3>Scan QR</h3>
-<p>Scan QR Code melalui aplikasi Trashure.</p>
+<p>Scan QR Code menggunakan aplikasi Trashure.</p>
 </div>
 
 <div class="card">
 <h3>Dapat Reward</h3>
-<p>Sistem memberi reward uang otomatis.</p>
+<p>Sistem memberi reward uang secara otomatis.</p>
 </div>
 
 </div>
@@ -86,24 +98,24 @@ mendapatkan reward uang digital melalui aplikasi.
 
 
 
-<section class="impact" id="impact">
+<section class="impact reveal" id="impact">
 
 <h2>Dampak Lingkungan</h2>
 
 <div class="stats">
 
 <div class="stat">
-<h3 id="users">0</h3>
+<h3 class="counter" data-target="1200">0</h3>
 <p>Pengguna</p>
 </div>
 
 <div class="stat">
-<h3 id="trash">0</h3>
-<p>Kg Sampah Terkumpul</p>
+<h3 class="counter" data-target="850">0</h3>
+<p>Kg Sampah</p>
 </div>
 
 <div class="stat">
-<h3 id="reward">0</h3>
+<h3 class="counter" data-target="5000000">0</h3>
 <p>Reward Dibagikan</p>
 </div>
 
@@ -113,13 +125,16 @@ mendapatkan reward uang digital melalui aplikasi.
 
 
 
-<section class="wallet">
+<section class="wallet reveal">
 
 <h2>Simulasi Reward</h2>
 
 <div class="balance">
+
 Saldo Anda
+
 <h3 id="money">Rp 0</h3>
+
 </div>
 
 <button onclick="earnMoney()">Dapatkan Reward</button>
@@ -130,7 +145,7 @@ Saldo Anda
 
 <footer>
 
-<p>© 2026 Trashure - Save Environment Earn Money</p>
+<p>© 2026 Trashure</p>
 
 </footer>
 

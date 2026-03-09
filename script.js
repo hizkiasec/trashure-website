@@ -1,21 +1,19 @@
 // MENU MOBILE
 
 const menuBtn = document.getElementById("menuBtn")
-const navMenu = document.getElementById("navMenu")
+const nav = document.getElementById("nav")
 
-menuBtn.onclick = () =>{
-
-navMenu.classList.toggle("show")
-
+menuBtn.onclick = ()=>{
+nav.classList.toggle("show")
 }
 
 
 
-// SCROLL HERO
+// SMOOTH SCROLL
 
-function startMission(){
+function scrollToSection(id){
 
-document.getElementById("how").scrollIntoView({
+document.getElementById(id).scrollIntoView({
 behavior:"smooth"
 })
 
@@ -23,37 +21,63 @@ behavior:"smooth"
 
 
 
-// ANIMASI STATISTIK
+// SCROLL REVEAL
 
-let users = 0
-let trash = 0
-let reward = 0
+const reveals = document.querySelectorAll(".reveal")
 
-function animateStats(){
+window.addEventListener("scroll",()=>{
 
-let interval = setInterval(()=>{
+reveals.forEach(el=>{
 
-if(users < 1200) users += 20
-if(trash < 850) trash += 15
-if(reward < 5000000) reward += 50000
+const top = el.getBoundingClientRect().top
+const windowHeight = window.innerHeight
 
-document.getElementById("users").innerText = users
-document.getElementById("trash").innerText = trash
-document.getElementById("reward").innerText = reward.toLocaleString()
+if(top < windowHeight - 100){
 
-if(users>=1200 && trash>=850 && reward>=5000000){
-clearInterval(interval)
-}
-
-},50)
+el.classList.add("active")
 
 }
 
-animateStats()
+})
+
+})
 
 
 
-// WALLET SIMULASI
+// COUNTER ANIMATION
+
+const counters = document.querySelectorAll(".counter")
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target = +counter.getAttribute("data-target")
+const count = +counter.innerText
+
+const inc = target/200
+
+if(count < target){
+
+counter.innerText = Math.ceil(count + inc)
+
+setTimeout(update,10)
+
+}else{
+
+counter.innerText = target.toLocaleString()
+
+}
+
+}
+
+update()
+
+})
+
+
+
+// WALLET SIMULATION
 
 let saldo = 0
 
@@ -66,6 +90,6 @@ saldo += reward
 document.getElementById("money").innerText =
 "Rp " + saldo.toLocaleString()
 
-alert("Anda mendapatkan reward Rp " + reward)
+alert("Selamat! Anda mendapat Rp " + reward)
 
 }

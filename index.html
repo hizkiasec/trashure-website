@@ -11,101 +11,141 @@
 
 <!-- INTRO SCREEN -->
 <div id="intro">
-    <div class="intro-content">
-        <h1 class="intro-logo">Trashure</h1>
-        <p>Turning Trash Into Treasure</p>
-        <div class="loader"></div>
-    </div>
+<div class="intro-content">
+<h1 class="intro-logo">Trashure</h1>
+<p class="intro-tag">Turning Trash Into Treasure</p>
+
+<div class="loader">
+<div class="loading-bar"></div>
+</div>
+
+</div>
 </div>
 
 <header>
-    <div class="logo">Trashure</div>
 
-    <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#about">Tentang</a>
-        <a href="#features">Fitur</a>
-        <a href="#impact">Impact</a>
-    </nav>
+<div class="logo">Trashure</div>
 
-    <div class="nav-right">
-        <button class="download" onclick="downloadApp()">Download App</button>
-        <div class="menu" id="menuBtn">☰</div>
-    </div>
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#features">Fitur</a>
+<a href="#impact">Impact</a>
+</nav>
+
+<div class="nav-right">
+<button class="download" onclick="downloadApp()">Download App</button>
+<div class="menu" id="menuBtn">☰</div>
+</div>
+
 </header>
 
 <section class="hero" id="home">
-    <h1>Ubah Sampah Jadi Uang</h1>
-    <p>Trashure adalah platform inovatif yang memberikan reward kepada masyarakat yang membuang sampah dengan benar.</p>
 
-    <div class="hero-buttons">
-        <button class="primary" onclick="scrollToSection('features')">Mulai Sekarang</button>
-        <button class="secondary" onclick="downloadApp()">Download App</button>
-    </div>
+<h1>Ubah Sampah Jadi Uang</h1>
+
+<p>
+Trashure adalah platform inovatif yang memberikan reward kepada masyarakat 
+yang membuang sampah dengan benar.
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary" onclick="scrollToSection('features')">
+Mulai Sekarang
+</button>
+
+<button class="secondary" onclick="downloadApp()">
+Download App
+</button>
+
+</div>
+
 </section>
 
 <section class="about reveal" id="about">
-    <h2>Tentang Trashure</h2>
-    <p>Trashure menggabungkan teknologi dan lingkungan untuk menciptakan sistem pengelolaan sampah modern yang memberikan reward kepada masyarakat yang peduli lingkungan.</p>
+
+<h2>Tentang Trashure</h2>
+
+<p>
+Trashure menggabungkan teknologi dan lingkungan untuk menciptakan sistem 
+pengelolaan sampah modern yang memberikan reward kepada masyarakat 
+yang peduli lingkungan.
+</p>
+
 </section>
 
 <section class="features reveal" id="features">
-    <h2>Fitur Utama</h2>
 
-    <div class="feature-grid">
-        <div class="feature">
-            <h3>Smart Trash Bin</h3>
-            <p>Tempat sampah pintar yang mendeteksi sampah.</p>
-        </div>
+<h2>Fitur Utama</h2>
 
-        <div class="feature">
-            <h3>Reward System</h3>
-            <p>Setiap sampah memberikan reward uang.</p>
-        </div>
+<div class="feature-grid">
 
-        <div class="feature">
-            <h3>Mobile App</h3>
-            <p>Monitor kontribusi lingkungan melalui aplikasi.</p>
-        </div>
-    </div>
+<div class="feature">
+<div class="icon">🗑️</div>
+<h3>Smart Trash Bin</h3>
+<p>Tempat sampah pintar yang mendeteksi sampah.</p>
+</div>
+
+<div class="feature">
+<div class="icon">💰</div>
+<h3>Reward System</h3>
+<p>Setiap sampah memberikan reward uang.</p>
+</div>
+
+<div class="feature">
+<div class="icon">📱</div>
+<h3>Mobile App</h3>
+<p>Monitor kontribusi lingkungan melalui aplikasi.</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="impact reveal" id="impact">
-    <h2>Dampak Lingkungan</h2>
 
-    <div class="stats">
-        <div class="stat">
-            <h3 class="counter" data-target="1500">0</h3>
-            <p>Pengguna</p>
-        </div>
+<h2>Dampak Lingkungan</h2>
 
-        <div class="stat">
-            <h3 class="counter" data-target="1200">0</h3>
-            <p>Kg Sampah</p>
-        </div>
+<div class="stats">
 
-        <div class="stat">
-            <h3 class="counter" data-target="10000000">0</h3>
-            <p>Reward Dibagikan</p>
-        </div>
-    </div>
+<div class="stat">
+<h3 class="counter" data-target="1500">0</h3>
+<p>Pengguna</p>
+</div>
+
+<div class="stat">
+<h3 class="counter" data-target="1200">0</h3>
+<p>Kg Sampah</p>
+</div>
+
+<div class="stat">
+<h3 class="counter" data-target="10000000">0</h3>
+<p>Reward Dibagikan</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="wallet reveal">
-    <h2>Simulasi Reward</h2>
 
-    <div class="balance">
-        Saldo Anda
-        <h3 id="money">Rp 0</h3>
-    </div>
+<h2>Simulasi Reward</h2>
 
-    <button onclick="earnMoney()">Dapat Reward</button>
+<div class="balance">
+Saldo Anda
+<h3 id="money">Rp 0</h3>
+</div>
+
+<button onclick="earnMoney()">Dapat Reward</button>
+
 </section>
 
 <footer>
-    <p>© 2026 Trashure</p>
+<p>© 2026 Trashure</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

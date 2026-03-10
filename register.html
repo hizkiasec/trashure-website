@@ -2,19 +2,28 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Register Trashure</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="auth-page">
 
-<section class="about">
+<div class="auth-container">
+
+<div class="auth-card">
 
 <h2>Register</h2>
+<p class="auth-sub">Buat akun Trashure</p>
 
 <form id="registerForm">
 
-<input type="text" id="name" placeholder="Nama" required>
+<input type="text" id="name" placeholder="Nama lengkap" required>
 
 <input type="email" id="email" placeholder="Email" required>
 
@@ -24,11 +33,16 @@
 
 </form>
 
-<p>Sudah punya akun?</p>
-
+<p class="auth-switch">
+Sudah punya akun?
 <a href="login.html">Login</a>
+</p>
 
-</section>
+<a href="index.html" class="back-home">← Kembali ke Home</a>
+
+</div>
+
+</div>
 
 <script src="auth.js"></script>
 

@@ -1,4 +1,4 @@
-// INTRO SCREEN
+// INTRO
 
 window.addEventListener("load", () => {
 
@@ -21,7 +21,7 @@ document.querySelector(".hero").classList.add("show")
 })
 
 
-// MENU MOBILE
+// MENU
 
 const menuBtn = document.getElementById("menuBtn")
 const nav = document.getElementById("nav")
@@ -83,7 +83,7 @@ update()
 })
 
 
-// REWARD SIMULATION
+// REWARD
 
 let saldo = 0
 

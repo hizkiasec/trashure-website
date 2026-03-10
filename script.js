@@ -1,65 +1,82 @@
-// INTRO
+// INTRO SCREEN
 window.addEventListener("load", () => {
     setTimeout(()=>{
-        intro.style.opacity = "0";
+        document.getElementById("intro").style.opacity = "0";
         setTimeout(()=>{
-            intro.style.display = "none";
+            document.getElementById("intro").style.display = "none";
             document.querySelector(".hero").classList.add("show");
-        },900)
+        },1000)
     },3000)
 })
 
-const intro = document.getElementById("intro");
+// MENU MOBILE
+const menuBtn = document.getElementById("menuBtn")
+const nav = document.getElementById("nav")
 
-// MOBILE NAV
-menuBtn.onclick = ()=> nav.classList.toggle("show")
+menuBtn.onclick = ()=>{
+    nav.classList.toggle("show")
+}
 
-// NAV SCROLL EFFECT
+// SCROLL NAVBAR EFFECT
 window.addEventListener("scroll", () => {
-    document.querySelector("header")
-    .classList.toggle("scrolled", window.scrollY > 30);
+    const header = document.querySelector("header");
+    if(window.scrollY > 30){
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
 });
 
 // SMOOTH SCROLL
 function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({ behavior:"smooth" });
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    })
 }
 
-// DOWNLOAD BUTTON
+// DOWNLOAD APP
 function downloadApp(){
-    alert("Aplikasi Trashure segera tersedia!");
+    alert("Aplikasi Trashure akan segera tersedia!");
 }
 
 // COUNTER
-document.querySelectorAll(".counter").forEach(counter=>{
+const counters = document.querySelectorAll(".counter")
+counters.forEach(counter=>{
     const update = ()=>{
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const inc = target/200;
+        const target = +counter.getAttribute("data-target")
+        const count = +counter.innerText
+        const inc = target/200
 
         if(count < target){
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(update,10);
+            counter.innerText = Math.ceil(count + inc)
+            setTimeout(update,10)
         } else {
-            counter.innerText = target.toLocaleString();
+            counter.innerText = target.toLocaleString()
         }
-    };
-    update();
-});
+    }
+    update()
+})
 
 // REWARD SIMULATION
-let saldo = 0;
+let saldo = 0
+
 function earnMoney(){
-    let reward = Math.floor(Math.random()*5000) + 1000;
-    saldo += reward;
-    money.innerText = "Rp " + saldo.toLocaleString();
-    alert("Selamat! Anda mendapat Rp " + reward);
+    let reward = Math.floor(Math.random()*5000)+1000
+    saldo += reward
+    document.getElementById("money").innerText =
+        "Rp " + saldo.toLocaleString()
+    alert("Selamat! Anda mendapat Rp " + reward)
 }
 
-// REVEAL ANIMATION
+// SCROLL ANIMATION
+const reveals = document.querySelectorAll(".reveal")
+
 window.addEventListener("scroll", ()=>{
-    document.querySelectorAll(".reveal").forEach(el=>{
-        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    reveals.forEach(el=>{
+        const top = el.getBoundingClientRect().top
+        const windowHeight = window.innerHeight
+
+        if(top < windowHeight - 100){
             el.classList.add("active")
         }
     })
